@@ -7,7 +7,7 @@ This repository contains all the evaluated models for which results are reported
 That is, this repo contains the `deploy.prototxt` and `train_val.prototxt` files for all model architectures, pretraining and preprocessing choices for which performance measures are reported in the paper linked above.
 `mean.binaryproto` files for outright deploying the models using Caffe are supplied as well.
 
-Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `.caffemodel` files) and `lmdb` data files are hosted externally (see section [Content] below).
+Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `.caffemodel` files) and `lmdb` data files are hosted externally (see section [Content](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/blob/master/README.md#content) below).
 
 This repository can be understood as an extension of [Gil Levi's age and gender deep learning project page](https://github.com/GilLevi/AgeGenderDeepLearning), this page's paper originally found its foundation in.
 
