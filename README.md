@@ -1,7 +1,8 @@
 # Understanding and Comparing Deep Neural Networks for Age and Gender Classification - Data and Models
 This repository contains all the evaluated models for which results are reported in the paper titled paper titled ["Understanding and Comparing Deep Neural Networks for Age and Gender Classification"](http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w23/Lapuschkin_Understanding_and_Comparing_ICCV_2017_paper.pdf) and published in the proceedings of the IEEE Workshop on Analysis and Modeling of Faces and Gestures (AMFG) at the International Conference on Computer Vision (ICCV) 2017. 
 
-<img src="pics/resultbarchart_sparse.png">
+![](pics/resultbarchart_sparse.png)
+*Model performances, depending on architecture, initialization and data preprocessing, averaged over all folds of the data set.*
 
 That is, this repo contains the `deploy.prototxt` and `train_val.prototxt` files for all model architectures, pretraining and preprocessing choices for which performance measures are reported in the paper linked above.
 `mean.binaryproto` files for outright deploying the models using Caffe are supplied as well.
@@ -25,6 +26,10 @@ Should you find any code or the models from this github repository useful, pleas
 
 All heatmap visualizations shown in the paper, such as the image at the top of the page, have been generated using the LRP implementation for Caffe, as provided by in the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox).
 Scripts assisting in the computation of heatmap visualizations can be found in folder *`TODO ADD ME`*
+
+![](pics/gender-model-comparison-wide.jpg)
+*Exemplary LRP heatmap visualizations for the predicted classes on a gender prediction task*
+
 
 ## Content
 - Folder `folds` contains the dataset split description for the [Adience benchmark data](https://talhassner.github.io/home/projects/Adience/Adience-data.html#agegender) used for training and evaluation. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
