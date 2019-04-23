@@ -27,6 +27,9 @@ Should you use any code or models from this github repository, please cite the c
 All heatmap visualizations shown in the paper, such as the image at the top of the page, have been generated using the LRP implementation for Caffe, as provided by in the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox).
 
 ## Content
+- Folder `folds` contains the dataset split description for the [Adience benchmark data](https://talhassner.github.io/home/projects/Adience/Adience-data.html#agegender) used for training and evaluation. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
+- `training_scripts` contains shell scripts used for starting the training of the neural network models.
+- `DataPrepartionCode` contains scripts for generating `mean.binaryproto` and `lmdb` binary blobs from raw Adience image data. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
 - The folder `mean_images` contains the `mean.binaryproto` files for all folds and preprocessing choices, as used for training, validation and testing
 - The folder `model_definitions` contains the `*.prototxt` files for Caffe, i.e. a description of the model architecture each. Here, a naming pattern `[target]_[init]_[arch][_preproc]` applies, where
   + `target` is from `{age, gender}` and describes the prediction problem
