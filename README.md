@@ -1,3 +1,4 @@
+
 # Understanding and Comparing Deep Neural Networks for Age and Gender Classification - Data and Models
 This repository contains all the evaluated models for which results are reported in the paper titled paper titled ["Understanding and Comparing Deep Neural Networks for Age and Gender Classification"](http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w23/Lapuschkin_Understanding_and_Comparing_ICCV_2017_paper.pdf) and published in the proceedings of the IEEE Workshop on Analysis and Modeling of Faces and Gestures (AMFG) at the International Conference on Computer Vision (ICCV) 2017. 
 
@@ -49,4 +50,29 @@ Scripts assisting in the computation of heatmap visualizations can be found in f
 
 ## Result overview
 Below table briefly presents the obtained results from the paper this repository belongs to.
-- [ ] TODO
+
+|           |                       |                       |                     |                         |     |            |                |               |                   |               |
+|:----------|----------------------:|----------------------:|--------------------:|------------------------:|:---:|:-----------|---------------:|--------------:|------------------:|--------------:|
+| **age**   |      **AdienceNet**   |      **CaffeNet**     |      **GoogleNet**  |      **VGG16**          |     | **gender** |  **AdienceNet**|  **CaffeNet** |     **GoogleNet** |      **VGG16**|
+| \[i, ⋅\]  |  51.4<sub>87.0</sub>  |  52.5<sub>87.9</sub>  |  54.4<sub>89.3</sub>|                         |     | \[i, ⋅\]   |            88.1|           87.7|               88.2|               |
+| \[r, ⋅\]  |  51.9<sub>87.4</sub>  |  52.6<sub>89.0</sub>  |  54.4<sub>90.0</sub>|                         |     | \[r, ⋅\]   |            88.3|           88.0|               89.3|               |
+| \[m, ⋅\]  |  53.6<sub>88.4</sub>  |  54.4<sub>89.7</sub>  |  56.5<sub>90.8</sub>|                         |     | \[m, ⋅\]   |            89.0|           88.9|               89.7|               |
+| \[i,n\]   |                       |  51.7<sub>87.6</sub>  |  56.6<sub>91.0</sub>|  53.8<sub>88.2</sub>    |     | \[i,n\]    |                |           90.0|           **91.2**|       **92.0**|
+| \[r,n\]   |                       |  52.2<sub>87.1</sub>  |  57.5<sub>92.0</sub>|                         |     | \[r,n\]    |                |           90.7|           **91.7**|               |
+| \[m,n\]   |                       |  53.0<sub>88.4</sub>  |  58.8<sub>92.7</sub>|  56.5<sub>90.0</sub>    |     | \[m,n\]    |                |           90.6|           **92.0**|       **92.7**|
+| \[i,w\]   |                       |                       |                     |  60.2<sub>94.2</sub>    |     | \[i,w\]    |                |               |                   |           90.6|
+| \[r,w\]   |                       |                       |                     |                         |     | \[r,w\]    |                |               |                   |               |
+| \[m,w\]   |                       |                       |                     |  63.0<sub>96.0</sub>    |     | \[m,w\]    |                |               |                   |       **92.3**|
+|           |                       |                       |                     |                         |     |            |                |               |                   |               |
+
+**Face categorization results in accuracy and percent, using
+oversampling for prediction.** *Left:* Results for **age**
+classification. Small numbers next to the accuracy score show 1-off
+accuracy, the accuracy of predicting the correct age group *or* an
+adjacent one. *Right:* Results for **gender** prediction.
+Entries in the *gender* and *age* column indicate choices for data preprocessing and model initialization:
+- *i*: in-plane, landmark based face alignment, *r*: rotation based alignment, *m*: combining *i* and *r* for training and using *r* for testing
+- *n*: Imagenet pretraining, *⋅*: random weight initialization and *w*: IMDB-WIKI pretraining following ImageNet pretraining
+
+Bold values match or exceed the at publication time reported state of the art results on
+the Adience benchmark dataset.
