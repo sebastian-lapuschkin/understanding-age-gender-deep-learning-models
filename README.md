@@ -40,6 +40,8 @@ All heatmap visualizations shown in the paper, such as the image at the top of t
 - The `lmdb`files used for model training, validation testing can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55).
 -  The model weights (i.e. the `*.caffemodel` files) to the neural network descriptions contained in this repository can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X). These files match the model definitions in folder `model_definitions`
 
+**Note** that you will have to adapt the (absolute) paths denoted in scripts and model description files in order to use the code.
+
 ## Result overview
 Below table briefly presents the obtained results from the paper this repository belongs to.
 - [ ] TODO
