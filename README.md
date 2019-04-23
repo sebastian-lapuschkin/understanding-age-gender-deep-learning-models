@@ -4,8 +4,12 @@ This repository contains all the evaluated models for which results are reported
 [ ] TODO SPLASH IMAGE
 [ ] TODO info about heatmap computation in paper.
 
-That is, this repo contains the `.caffemodel`, `deploy.prototxt` and `train_val.prototxt` files for all model architectures, pretraining and preprocessing choices for which performance measures are reported in the paper linked above.
-`mean.binaryproto` files for outright deploying the models are supplied as well. [ ]TODO LINKS links to the `lmdb` data files used for training are linked below.
+That is, this repo contains the `deploy.prototxt` and `train_val.prototxt` files for all model architectures, pretraining and preprocessing choices for which performance measures are reported in the paper linked above.
+`mean.binaryproto` files for outright deploying the models are supplied as well.
+
+Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `.caffemodel` files) and `lmdb` data files are hosted externally (see ... )
+
+[ ]TODO LINKS links to the `lmdb` data files used for training are linked below.
 
 Pretrained model starting weights, for reproducing the results "from scratch" can be found in the data.
 
@@ -23,5 +27,6 @@ Should you use any code or models from this github repository, please cite the c
   url = {https://doi.org/10.1109/ICCVW.2017.191}
 }
 ```
+## Content
 
 # [] TODO RESULTS AND LINKS
