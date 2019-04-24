@@ -42,8 +42,8 @@ Scripts assisting in the computation of heatmap visualizations can be found in f
   + `arch` is from `{caffereference, googlenet, vgg16, net_definitions}` and describes the architecture of the model. Here, `net_definitions` refers to the model architecture used in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning).
   + The `_preproc` suffix is optional and refers to `_unaligned` images (i.e. training images only under rotation alignment), aligned training images (landmark-based alignment, so suffix) or `_mixed` alignment, (i.e. both images under landmark-based and rotation-based alignment are used for trainng)
   + [ ] TODO add starting weights to datacloud
-- The `lmdb`files used for model training, validation testing can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55).
--  The model weights (i.e. the `*.caffemodel` files) to the neural network descriptions contained in this repository can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X). These files match the model definitions in folder `model_definitions`
+- [The `lmdb` files](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55) used for model training, validation testing can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55).
+-  [The model weights](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X) (i.e. the `*.caffemodel` files) to the neural network descriptions contained in this repository can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X). These files match the model definitions in folder `model_definitions`
 - `heatmap_drawing` contains scripts generating configuration files for computing LRP heatmaps using the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox) for Caffe.
 
 **Note** that you will have to adapt the (absolute) paths denoted in scripts and model description files in order to use the code.
