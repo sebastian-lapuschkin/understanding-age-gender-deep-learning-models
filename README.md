@@ -28,7 +28,7 @@ All heatmap visualizations shown in the paper, such as the image at the top of t
 Scripts assisting in the computation of heatmap visualizations can be found in folder [`heatmap_drawing`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/heatmap_drawing)
 
 ![](pics/gender-model-comparison-wide.jpg)
-**Exemplary LRP heatmap visualizations for the predicted classes on a gender prediction task**
+**Exemplary LRP heatmap visualizations for the predicted classes on a gender prediction task, identifying regions in the input image used by the model to decide for (hot colors) or argue against (cold colors) the predicted (=true, in these cases) class**
 
 
 ## Repository Content
