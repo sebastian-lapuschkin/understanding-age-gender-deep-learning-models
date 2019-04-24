@@ -25,18 +25,18 @@ This repository shares scripts and workflows with [Gil Levi's age and gender dee
 Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `*.caffemodel` files) and `lmdb` data files are hosted externally, via a nextcloud service of the Fraunhofer Heinrich Hertz Institute (see section [Repository Content](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/blob/master/README.md#content) below).
 
 All heatmap visualizations shown in the paper, such as the image at the top of the page, have been generated using the LRP implementation for Caffe, as provided by in the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox).
-Scripts assisting in the computation of heatmap visualizations can be found in folder *`TODO ADD ME`*
+Scripts assisting in the computation of heatmap visualizations can be found in folder [`heatmap_drawing`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/heatmap_drawing)
 
 ![](pics/gender-model-comparison-wide.jpg)
 **Exemplary LRP heatmap visualizations for the predicted classes on a gender prediction task**
 
 
 ## Repository Content
-- Folder `folds` contains the dataset split description for the [Adience benchmark data](https://talhassner.github.io/home/projects/Adience/Adience-data.html#agegender) used for training and evaluation. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
-- `training_scripts` contains shell scripts used for starting the training of the neural network models.
-- `DataPrepartionCode` contains scripts for generating `mean.binaryproto` and `lmdb` binary blobs from raw Adience image data. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
-- The folder `mean_images` contains the `mean.binaryproto` files for all folds and preprocessing choices, as used for training, validation and testing
-- The folder `model_definitions` contains the `*.prototxt` files for Caffe, i.e. a description of the model architecture each. Here, a naming pattern `[target]_[init]_[arch][_preproc]` applies, where
+- Folder [`folds`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/folds) contains the dataset split description for the [Adience benchmark data](https://talhassner.github.io/home/projects/Adience/Adience-data.html#agegender) used for training and evaluation. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
+- [`training_scripts`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/training_scripts) contains shell scripts used for starting the training of the neural network models.
+- [`DataPrepartionCode`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/DataPreparationCode) contains scripts for generating `mean.binaryproto` and `lmdb` binary blobs from raw Adience image data. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
+- The folder [`mean_images`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/mean_images) contains the `mean.binaryproto` files for all folds and preprocessing choices, as used for training, validation and testing
+- The folder [`model_definitions`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/model_definitions) contains the `*.prototxt` files for Caffe, i.e. a description of the model architecture each. Here, a naming pattern `[target]_[init]_[arch][_preproc]` applies, where
   + `target` is from `{age, gender}` and describes the prediction problem
   + `init` is from `{fromscratch, finetuning, imdbwiki}` and describes random initialization, a weight intialization from ImageNet pretraining, and a weight initialization from ImageNet pretraining followed by [IMDB-WIKI](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/) pretraining, respectively.
   + `arch` is from `{caffereference, googlenet, vgg16, net_definitions}` and describes the architecture of the model. Here, `net_definitions` refers to the model architecture used in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning). The `net_definitions` models do not have an `init` block within the folder name.
@@ -44,7 +44,7 @@ Scripts assisting in the computation of heatmap visualizations can be found in f
   + The [pretrained](https://datacloud.hhi.fraunhofer.de/nextcloud/s/rakPNNWAQbeGCPx) models used as starting points (`init`) for training can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/rakPNNWAQbeGCPx). The model weights behind this link have been downloaded from the [Caffe repo](https://github.com/BVLC/caffe/tree/master/models) (`caffereference`, `googlenet`), the [IMDB-WIKI project page](https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/) (`vgg16` on `imdbwiki`) and the [Caffe Model Zoo](https://github.com/BVLC/caffe/wiki/Model-Zoo#models-used-by-the-vgg-team-in-ilsvrc-2014) (`vgg16` on `imagenet`).
 - [The `lmdb` files](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55) used for model training, validation testing can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55).
 -  [The model weights](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X) (i.e. the `*.caffemodel` files) to the neural network descriptions contained in this repository can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X). These files match the model definitions in folder `model_definitions`
-- `heatmap_drawing` contains scripts generating configuration files for computing LRP heatmaps using the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox) for Caffe.
+- [`heatmap_drawing`](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/tree/master/heatmap_drawing) contains scripts generating configuration files for computing LRP heatmaps using the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox) for Caffe.
 
 **Note** that you will have to adapt the (absolute) paths denoted in scripts and model description files in order to use the code.
 
