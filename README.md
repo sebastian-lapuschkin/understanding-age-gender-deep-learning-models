@@ -9,7 +9,7 @@ That is, this repo contains the `deploy.prototxt` and `train_val.prototxt` files
 `mean.binaryproto` files for the employed datasets and Caffe are supplied as well.
 This repository shares scripts and workflows with [Gil Levi's age and gender deep learning project page](https://github.com/GilLevi/AgeGenderDeepLearning).
 
-Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `*.caffemodel` files) and `lmdb` data files are hosted externally, via a nextcloud service of the Fraunhofer Heinrich Hertz Institute (see section [Content](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/blob/master/README.md#content) below).
+Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `*.caffemodel` files) and `lmdb` data files are hosted externally, via a nextcloud service of the Fraunhofer Heinrich Hertz Institute (see section [Repository Content](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/blob/master/README.md#content) below).
 
 Should you find any code or the models from this github repository useful, please add a reference to the corresponding publication to your work:
 ```
@@ -31,7 +31,7 @@ Scripts assisting in the computation of heatmap visualizations can be found in f
 *Exemplary LRP heatmap visualizations for the predicted classes on a gender prediction task*
 
 
-## Content
+## Repository Content
 - Folder `folds` contains the dataset split description for the [Adience benchmark data](https://talhassner.github.io/home/projects/Adience/Adience-data.html#agegender) used for training and evaluation. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
 - `training_scripts` contains shell scripts used for starting the training of the neural network models.
 - `DataPrepartionCode` contains scripts for generating `mean.binaryproto` and `lmdb` binary blobs from raw Adience image data. This folder is an extension to the one found in [Gil Levi's repo](https://github.com/GilLevi/AgeGenderDeepLearning) and contains additional preprocessing settings.
