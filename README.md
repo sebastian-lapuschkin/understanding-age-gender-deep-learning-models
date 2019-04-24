@@ -1,16 +1,15 @@
 
 # Understanding and Comparing Deep Neural Networks for Age and Gender Classification - Data and Models
-This repository contains all the evaluated models for which results are reported in the paper titled paper titled ["Understanding and Comparing Deep Neural Networks for Age and Gender Classification"](http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w23/Lapuschkin_Understanding_and_Comparing_ICCV_2017_paper.pdf) and published in the proceedings of the IEEE Workshop on Analysis and Modeling of Faces and Gestures (AMFG) at the International Conference on Computer Vision (ICCV) 2017. 
+This repository contains all the evaluated models for which results are reported in the paper titled paper titled ["Understanding and Comparing Deep Neural Networks for Age and Gender Classification"](http://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w23/Lapuschkin_Understanding_and_Comparing_ICCV_2017_paper.pdf) as published in the proceedings of the IEEE Workshop on Analysis and Modeling of Faces and Gestures (AMFG) at the International Conference on Computer Vision (ICCV) 2017. 
 
 ![](pics/resultbarchart_sparse.png)
 *Model performances, depending on architecture, initialization and data preprocessing, averaged over all folds of the data set. For additional results, see section [Result Overview](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/blob/master/README.md#result-overview).*
 
 That is, this repo contains the `deploy.prototxt` and `train_val.prototxt` files for all model architectures, pretraining and preprocessing choices for which performance measures are reported in the paper linked above.
-`mean.binaryproto` files for outright deploying the models using Caffe are supplied as well.
+`mean.binaryproto` files for the employed datasets and Caffe are supplied as well.
+This repository shares scripts and workflows with [Gil Levi's age and gender deep learning project page](https://github.com/GilLevi/AgeGenderDeepLearning).
 
 Due to github's hard file size limit of 100mb per file, all model weights (i.e. the `*.caffemodel` files) and `lmdb` data files are hosted externally, via a nextcloud service of the Fraunhofer Heinrich Hertz Institute (see section [Content](https://github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models/blob/master/README.md#content) below).
-
-This repository can be understood as an extension of [Gil Levi's age and gender deep learning project page](https://github.com/GilLevi/AgeGenderDeepLearning), this page's paper originally found its foundation in.
 
 Should you find any code or the models from this github repository useful, please add a reference to the corresponding publication to your work:
 ```
@@ -45,6 +44,7 @@ Scripts assisting in the computation of heatmap visualizations can be found in f
   + [ ] TODO add starting weights to datacloud
 - The `lmdb`files used for model training, validation testing can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/n6BLLnGPzinbe55).
 -  The model weights (i.e. the `*.caffemodel` files) to the neural network descriptions contained in this repository can be downloaded [here](https://datacloud.hhi.fraunhofer.de/nextcloud/s/TQnGNJmQZLWkQ7X). These files match the model definitions in folder `model_definitions`
+- `heatmap_drawing` contains scripts generating configuration files for computing LRP heatmaps using the [LRP Toolbox](https://github.com/sebastian-lapuschkin/lrp_toolbox) for Caffe.
 
 **Note** that you will have to adapt the (absolute) paths denoted in scripts and model description files in order to use the code.
 
