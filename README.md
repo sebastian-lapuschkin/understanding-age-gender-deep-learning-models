@@ -74,5 +74,5 @@ Entries in the *gender* and *age* column indicate choices for data preprocessing
 - *i*: in-plane, landmark based face alignment, *r*: rotation based alignment, *m*: combining *i* and *r* for training and using *r* for testing
 - *n*: Imagenet pretraining, *⋅*: random weight initialization and *w*: IMDB-WIKI pretraining following ImageNet pretraining
 
-Bold values match or exceed the at publication time reported state of the art results on
+**Bold** values match or exceed the at publication time reported state of the art results on
 the Adience benchmark dataset.
