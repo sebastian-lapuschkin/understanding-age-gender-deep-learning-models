@@ -1,0 +1,14 @@
+net: "train_val_test_fold_is_0.prototxt"
+test_iter: 10
+test_interval: 10000
+base_lr: 0.0001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 25000
+display: 10
+max_iter: 2400
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 100
+snapshot_prefix: "caffenet_train"
+solver_mode: GPU
